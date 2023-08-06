@@ -13,7 +13,8 @@ namespace Code.Infrastructure.StateMachine
 			BootstrapState.Factory bootstrapStateFactory,
 			LoadProgressState.Factory loadProgressStateFactory,
 			MenuState.Factory menuStateFactory,
-			GameState.Factory gameStateFactory
+			GameState.Factory gameStateFactory,
+			GameOverState.Factory gameOverStateFactory
 			)
 		{
 			_statesMap = new Dictionary<Type, IExitableState>();
@@ -22,6 +23,7 @@ namespace Code.Infrastructure.StateMachine
 			RegisterState(loadProgressStateFactory.Create(this));
 			RegisterState(menuStateFactory.Create(this));
 			RegisterState(gameStateFactory.Create(this));
+			RegisterState(gameOverStateFactory.Create(this));
 		}
 
 		private void RegisterState<TState>(TState state) where TState : class, IExitableState

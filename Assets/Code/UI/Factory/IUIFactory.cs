@@ -1,4 +1,5 @@
 using Code.Data.Shop;
+using Code.UI.Windows;
 using Code.UI.Windows.ShopWindow;
 using UnityEngine;
 
@@ -11,5 +12,6 @@ namespace Code.UI.Factory
 		void CreateShop();
 		void CreateChooseLevel();
 		void CreateShopItem(ShopItem prefab, Transform parent, WeaponType type);
+		void CreateGameOverWindow(WindowType type);
 	}
 }

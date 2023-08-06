@@ -15,7 +15,9 @@ namespace Code.Infrastructure.StateMachine
 				.BindFactory<IGameStateMachine, MenuState, MenuState.Factory>();
 			Container
 				.BindFactory<IGameStateMachine, GameState, GameState.Factory>();
-
+			Container
+				.BindFactory<IGameStateMachine, GameOverState, GameOverState.Factory>();
+			
 			Container
 				.BindInterfacesAndSelfTo<GameStateMachine>()
 				.AsSingle();

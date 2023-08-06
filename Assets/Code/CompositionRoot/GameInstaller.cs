@@ -1,11 +1,12 @@
-using Code.Assets;
 using Code.Data;
 using Code.Data.Models.GameModel;
 using Code.Infrastructure;
 using Code.Infrastructure.Factory;
 using Code.Infrastructure.StateMachine;
 using Code.Services.Bank;
+using Code.Services.GameOverService;
 using Code.Services.InputService;
+using Code.Services.PauseService;
 using Code.Services.SaveService;
 using Code.Services.StaticDataService;
 using Code.UI.Elements.LoadingCurtain;
@@ -27,13 +28,15 @@ namespace CompositionRoot
 
 			BindLoadingCurtain();
 
+			BindPauseService();
+
 			BindGameStateMachine();
+			
+			BindGameOverService();
 
 			BindPersistentProgressModel();
 			
 			BindGameModel();
-
-			BindAssetsProvider();
 
 			BindSaveService();
 
@@ -90,6 +93,20 @@ namespace CompositionRoot
 				.AsSingle();
 		}
 
+		private void BindPauseService()
+		{
+			Container
+				.BindInterfacesAndSelfTo<PauseService>()
+				.AsSingle();
+		}
+
+		private void BindGameOverService()
+		{
+			Container
+				.BindInterfacesAndSelfTo<GameOverService>()
+				.AsSingle();
+		}
+
 		private void BindPersistentProgressModel()
 		{
 			Container
@@ -101,13 +118,6 @@ namespace CompositionRoot
 		{
 			Container
 				.BindInterfacesAndSelfTo<GameModel>()
-				.AsSingle();
-		}
-
-		private void BindAssetsProvider()
-		{
-			Container
-				.BindInterfacesAndSelfTo<AssetProvider>()
 				.AsSingle();
 		}
 

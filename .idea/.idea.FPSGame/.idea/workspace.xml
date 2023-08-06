@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e33fec3-5946-40c8-9163-d62ab84c5a17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameOverState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameOverState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameResults.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameResults.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/IGameOverService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/IGameOverService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/PauseService.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/PauseService/IPauseService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/PauseService/IPauseService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/PauseService/PauseService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/PauseService/PauseService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/PauseService/PauseState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/PauseService/PauseState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/EnemyStaticData.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/EnemyStaticData/EnemyStaticData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/EnemyStaticData/EnemyStaticData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/GameOverWindow.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/GameOverWindow/GameOverWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/GameOverWindow/GameOverWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Assets/AssetAddresses.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Assets/AssetAddresses.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Assets/AssetProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Assets/AssetProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Assets/IAssetProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Assets/IAssetProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/CompositionRoot/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/CompositionRoot/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachineInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/BootstrapState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawnMarker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawnMarker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataPaths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/Hud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/Hud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Factory/IUIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Factory/IUIFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Factory/UIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Factory/UIFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/WindowConfigs/WindowConfigs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/WindowConfigs/WindowConfigs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/UIRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/UIRoot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/StaticData/WeaponsConfig/WeaponsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/StaticData/EnemyStaticData/EnemyStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataPaths.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawnMarker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverStates.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverReporterService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/GameOverService/IGameOverReporterService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameResults.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/GameOverService/IGameOverService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/PauseService/PauseState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/PauseService/IPauseService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/PauseService/PauseService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachineInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Factory/UIFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Factory/IUIFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/Hud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/CompositionRoot/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/GameOverWindow/GameOverWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameOverState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2TYdLQ5zRxCKsGOmJNZhN4dpdWb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e33fec3-5946-40c8-9163-d62ab84c5a17" name="Default Changelist" comment="" />
+      <created>1691223894592</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691223894592</updated>
+      <workItem from="1691223914587" duration="2162000" />
+      <workItem from="1691230289711" duration="9858000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="601" y="158" key="RiderGenerateDialog" timestamp="1691235178561">
+      <screen x="0" y="0" width="1536" height="912" />
+    </state>
+    <state x="601" y="158" key="RiderGenerateDialog/0.0.1536.912@0.0.1536.912" timestamp="1691235178561" />
+    <state x="431" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1691311482576">
+      <screen x="0" y="0" width="1536" height="912" />
+    </state>
+    <state x="431" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1536.912@0.0.1536.912" timestamp="1691311482576" />
+  </component>
+</project>

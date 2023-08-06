@@ -1,6 +1,10 @@
 using System;
+using Code.Infrastructure.StateMachine;
+using Code.Infrastructure.StateMachine.States;
 using Code.Logic;
+using Code.Services.GameOverService;
 using UnityEngine;
+using Zenject;
 
 namespace Code.Player
 {
@@ -8,7 +12,15 @@ namespace Code.Player
 	{
 		[SerializeField] private int maxHealth;
 		[SerializeField] private int currentHealth;
-	    
+
+		private IGameOverService _gameOverService;
+		
+		[Inject]
+		private void Construct(IGameOverService gameOverService)
+		{
+			_gameOverService = gameOverService;
+		}
+		
 	    public event Action<int> HealthChanged;
 
 	    public int MaxHealth
@@ -40,6 +52,7 @@ namespace Code.Player
 
 	    private void Die()
 	    {
+		    _gameOverService.OverGameWithResult(GameResults.Lose);
 	    }
 
 	    public void CollectHealth()

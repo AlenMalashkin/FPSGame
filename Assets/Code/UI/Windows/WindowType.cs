@@ -4,6 +4,8 @@ namespace Code.UI.Windows
 	{
 		Menu,
 		Shop,
-		ChooseLevel
+		ChooseLevel,
+		Lose,
+		Win
 	}
 }

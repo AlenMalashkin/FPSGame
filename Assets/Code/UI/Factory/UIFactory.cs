@@ -50,5 +50,11 @@ namespace Code.UI.Factory
 			shopItem.Type = type;
 			shopItem.Init();
 		}
+
+		public void CreateGameOverWindow(WindowType type)
+		{
+			WindowConfig chooseLevelWindowConfig = _staticDataService.ForWindow(type);
+			_diContainer.InstantiatePrefab(chooseLevelWindowConfig.WindowPrefab, _uiRoot);
+		}
 	}
 }

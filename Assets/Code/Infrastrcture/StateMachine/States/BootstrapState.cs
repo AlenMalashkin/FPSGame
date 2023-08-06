@@ -1,4 +1,3 @@
-using Code.Assets;
 using Code.Services.StaticDataService;
 using Code.UI.Elements.LoadingCurtain;
 using Zenject;

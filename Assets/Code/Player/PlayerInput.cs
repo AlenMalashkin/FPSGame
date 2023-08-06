@@ -1,3 +1,4 @@
+using Code.Services.GameOverService;
 using Code.Services.InputService;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
@@ -8,20 +9,30 @@ namespace Code.Player
 	public class PlayerInput : MonoBehaviour
 	{
 		public IInputService InputService { get; private set; }
+		private IGameOverService _gameOverService;
 
 		[Inject]
-		private void Construct(IInputService inputService)
+		private void Construct(IInputService inputService, IGameOverService gameOverService)
 		{
 			InputService = inputService;
+			_gameOverService = gameOverService;
 		}
 
 		private void OnEnable()
 		{
 			InputService.Enable();
+			_gameOverService.ResultsReported += OnResultsReported;
 		}
 
 		private void OnDisable()
 		{
+			InputService.Disable();
+			_gameOverService.ResultsReported -= OnResultsReported;
+		}
+
+		private void OnResultsReported(GameResults results)
+		{
+			Debug.Log("Results reported");
 			InputService.Disable();
 		}
 

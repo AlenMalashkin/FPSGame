@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Code.Enemy;
 using UnityEngine;
 
 namespace Code.Infrastructure.Factory
@@ -7,8 +8,8 @@ namespace Code.Infrastructure.Factory
 	{
 		GameObject CreatePlayer(Transform at);
 		GameObject CreateHud(Transform at);
-		GameObject CreateEnemySpawner(Transform at);
-		GameObject CreateEnemy(Transform at);
+		GameObject CreateEnemySpawner(EnemyType type, Transform at);
+		GameObject CreateEnemy(EnemyType type, Transform at);
 		GameObject CreateWeapon(GameObject prefab, Transform at);
 	}
 }

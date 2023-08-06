@@ -1,5 +1,6 @@
 using System;
 using Code.Data.Models.GameModel;
+using Code.Enemy;
 using Code.Infrastructure.Factory;
 using UnityEngine;
 using VavilichevGD.Utils.Timing;
@@ -9,6 +10,7 @@ namespace Code.Logic.Spawners
 {
 	public class EnemySpawner : MonoBehaviour
 	{
+		public EnemyType Type { get; set; }
 		[SerializeField] private EnemySpawnerHealth enemySpawnerHealth;
 		[SerializeField] private Transform spawnPoint;
 		[SerializeField] private GameObject spawner;
@@ -45,7 +47,7 @@ namespace Code.Logic.Spawners
 
 		private void Spawn()
 		{
-			_gameFactory.CreateEnemy(spawnPoint);
+			_gameFactory.CreateEnemy(Type, spawnPoint);
 			_timeToSpawnNext = timeToSpawnNext;
 		}
 

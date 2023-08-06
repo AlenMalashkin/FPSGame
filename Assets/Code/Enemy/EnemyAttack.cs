@@ -9,8 +9,8 @@ namespace Code.Enemy
 {
 	public class EnemyAttack : MonoBehaviour
 	{
+		public int Damage { get; set; }
 		[SerializeField] private EnemyMovement movement;
-		[SerializeField] private int damage = 10;
 		[SerializeField] private float attackRate = 1f;
 		[SerializeField] private float cleavage = 0.5f;
 		[SerializeField] private LayerMask mask;
@@ -60,7 +60,7 @@ namespace Code.Enemy
 		{
 			DrawDebug(AttackPosition(), cleavage, 1);
 			if (Hit(out Collider other))
-				other.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+				other.gameObject.GetComponent<IHealth>().TakeDamage(Damage);
 		}
 
 		private bool Hit(out Collider hit)
