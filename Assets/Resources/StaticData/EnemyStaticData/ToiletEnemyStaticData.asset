@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ToiletEnemyStaticData
   m_EditorClassIdentifier: 
   Type: 0
-  EnemyPrefab: {fileID: 6871199812885627734, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
+  EnemyPrefab: {fileID: 8680538566618071596, guid: a96994153e19160489e234af30717c17, type: 3}
   Health: 10
   Damage: 10

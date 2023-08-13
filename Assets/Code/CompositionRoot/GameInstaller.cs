@@ -1,9 +1,13 @@
 using Code.Data;
+using Code.Data.Models.EnemySpawnerModel;
 using Code.Data.Models.GameModel;
 using Code.Infrastructure;
 using Code.Infrastructure.Factory;
 using Code.Infrastructure.StateMachine;
+using Code.Logic.GameModes;
+using Code.Services;
 using Code.Services.Bank;
+using Code.Services.ChooseGameModeService;
 using Code.Services.GameOverService;
 using Code.Services.InputService;
 using Code.Services.PauseService;
@@ -32,11 +36,15 @@ namespace CompositionRoot
 
 			BindGameStateMachine();
 			
+			BindChooseGameModeService();
+			
 			BindGameOverService();
 
 			BindPersistentProgressModel();
 			
 			BindGameModel();
+			
+			BindEnemySpawnerModel();
 
 			BindSaveService();
 
@@ -46,6 +54,8 @@ namespace CompositionRoot
 			
 			BindInputService();
 			
+			BindEnemySpawnTimeReduceService();
+
 			BindWindowService();
 
 			BindUIFactory();
@@ -92,6 +102,15 @@ namespace CompositionRoot
 				.ByInstaller<GameStateMachineInstaller>()
 				.AsSingle();
 		}
+		
+		private void BindChooseGameModeService()
+		{
+			Container
+				.Bind<IChooseGameModeService>()
+				.FromSubContainerResolve()
+				.ByInstaller<GameModeServiceInstaller>()
+				.AsSingle();
+		}
 
 		private void BindPauseService()
 		{
@@ -121,6 +140,13 @@ namespace CompositionRoot
 				.AsSingle();
 		}
 
+		private void BindEnemySpawnerModel()
+		{
+			Container
+				.BindInterfacesAndSelfTo<EnemySpawnersModel>()
+				.AsSingle();
+		}
+
 		private void BindSaveService()
 		{
 			Container
@@ -146,6 +172,13 @@ namespace CompositionRoot
 		{
 			Container
 				.BindInterfacesAndSelfTo<InputService>()
+				.AsSingle();
+		}
+
+		private void BindEnemySpawnTimeReduceService()
+		{
+			Container
+				.BindInterfacesAndSelfTo<EnemySpawnTimeReduceService>()
 				.AsSingle();
 		}
 

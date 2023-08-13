@@ -5,5 +5,7 @@ namespace Code.Services.StaticDataService
 		public const string EnemyStaticDataPath = "StaticData/EnemyStaticData";
 		public const string WindowConfigsPath = "StaticData/WindowConfigs/WindowConfigs";
 		public const string WeaponsConfigPath = "StaticData/WeaponsConfig/WeaponsConfig";
+		public const string EnemySpawnersConfigPath = "StaticData/EnemySpawnersStaticData/SpawnersStaticData";
+		public const string HUDConfigsPath = "StaticData/HUDConfigs/HUDConfigs";
 	}
 }

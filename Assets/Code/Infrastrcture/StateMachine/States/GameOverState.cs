@@ -27,10 +27,13 @@ namespace Code.Infrastructure.StateMachine.States
                 _uiFactory.CreateGameOverWindow(WindowType.Lose);
             else if (payload == GameResults.Win)
                 _uiFactory.CreateGameOverWindow(WindowType.Win);
+
+            _pauseService.Pause();
         }
 
         public void Exit()
         {
+            _pauseService.Unpause();
         }
         
         public class Factory : PlaceholderFactory<IGameStateMachine, GameOverState>

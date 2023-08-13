@@ -37,7 +37,7 @@ namespace Code.Infrastructure.StateMachine
 
 		public void Enter<TState, TPayload>(TPayload payload) where TState : class, IPayloadedState<TPayload>
 		{
-			TState state = GetState<TState>();
+			TState state = ChangeState<TState>();
 			state.Enter(payload);
 		}
 

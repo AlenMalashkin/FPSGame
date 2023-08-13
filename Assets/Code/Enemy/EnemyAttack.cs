@@ -11,6 +11,7 @@ namespace Code.Enemy
 	{
 		public int Damage { get; set; }
 		[SerializeField] private EnemyMovement movement;
+		[SerializeField] private float distance = 1;
 		[SerializeField] private float attackRate = 1f;
 		[SerializeField] private float cleavage = 0.5f;
 		[SerializeField] private LayerMask mask;
@@ -84,7 +85,7 @@ namespace Code.Enemy
 
 		private Vector3 AttackPosition()
 			=> new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z) +
-				transform.forward * 1;
+				transform.forward * distance;
 
 		public void EnableAttack()
 		{

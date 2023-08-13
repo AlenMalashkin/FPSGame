@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: WeaponsConfig
   m_EditorClassIdentifier: 
   WeponsData:
-  - BulletsCount: 60
-    weaponPrefab: {fileID: 5648858362179916406, guid: 9ae9adb8e2d4aa34dbde21cce415a192, type: 3}
+  - weaponPrefab: {fileID: 5648858362179916406, guid: 9ae9adb8e2d4aa34dbde21cce415a192, type: 3}
     Type: 0
     Sprite: {fileID: 7482667652216324306, guid: 1e68f435d9bad4b44986a53ce03b29e9, type: 3}
     Cost: 1
     Damage: 1
     FireRate: 0.4
     ReloadTime: 1
+    BulletsCount: 60
     BulletsInClip: 12
-  - BulletsCount: 150
-    weaponPrefab: {fileID: 5537900330136741594, guid: e8b35fe832ff638489e3b6453e2c35f3, type: 3}
+  - weaponPrefab: {fileID: 5537900330136741594, guid: e8b35fe832ff638489e3b6453e2c35f3, type: 3}
     Type: 1
     Sprite: {fileID: 7482667652216324306, guid: 1e68f435d9bad4b44986a53ce03b29e9, type: 3}
     Cost: 2
     Damage: 2
     FireRate: 0.15
     ReloadTime: 1
+    BulletsCount: 150
     BulletsInClip: 30
-  - BulletsCount: 150
-    weaponPrefab: {fileID: 7556537732041727964, guid: 1126f929365d5784581a7db5afe9cc91, type: 3}
+  - weaponPrefab: {fileID: 7556537732041727964, guid: 1126f929365d5784581a7db5afe9cc91, type: 3}
     Type: 2
     Sprite: {fileID: 7482667652216324306, guid: 1e68f435d9bad4b44986a53ce03b29e9, type: 3}
     Cost: 3
     Damage: 3
     FireRate: 0.2
     ReloadTime: 1
+    BulletsCount: 150
     BulletsInClip: 30

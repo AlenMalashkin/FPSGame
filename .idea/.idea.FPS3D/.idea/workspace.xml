@@ -4,21 +4,127 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3c8ea7c-8159-48df-89de-991f53c18f8e" name="Default Changelist" comment="" />
+    <list default="true" id="e3c8ea7c-8159-48df-89de-991f53c18f8e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/HUDConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/HUDConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Models/EnemySpawnerModel.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Models/EnemySpawnerModel/EnemySpawnerStats.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Models/EnemySpawnerModel/EnemySpawnerStats.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Models/EnemySpawnerModel/EnemySpawnersModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Models/EnemySpawnerModel/EnemySpawnersModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Models/EnemySpawnerModel/IEnemySpawnersModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Models/EnemySpawnerModel/IEnemySpawnersModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/ArenaGameMode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/ArenaGameMode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/GameModeServiceInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/GameModeServiceInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/GameModes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/GameModes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/IGameMode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/IGameMode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/SurvivalGameMode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/SurvivalGameMode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ChooseGameModeService.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ChooseGameModeService/ChooseGameModeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ChooseGameModeService/ChooseGameModeService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ChooseGameModeService/IChooseGameModeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ChooseGameModeService/IChooseGameModeService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/EnemySpawnTimeReduceService.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/EnemySpawnTimeReduceService/EnemySpawnTimeReduceService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/EnemySpawnTimeReduceService/EnemySpawnTimeReduceService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/EnemySpawnTimeReduceService/IEnemySpawnTimeReduceService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/EnemySpawnTimeReduceService/IEnemySpawnTimeReduceService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/EnemySpawnerStaticData/EnemySpawnerStaticData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/EnemySpawnerStaticData/EnemySpawnerStaticData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/HUDConfigs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/HUDConfigs/HUDConfigs.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/HUDConfigs/HUDConfigs.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/HUDType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/HUDType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPS3D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPS3D/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPS3D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPS3D/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPS3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPS3D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Built In Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Built In Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptFastMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptFastMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedPlayMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedPlayMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptVirtualMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptVirtualMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DefaultObject.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DefaultObject.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/CompositionRoot/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/CompositionRoot/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/PrefabsPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/PrefabsPaths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameOverState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameOverState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawnerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawnerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataPaths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/HUDParent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/HUDParent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/Hud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/HudBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/Hud.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/HudBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/ChooseLevelWindow/ChooseLevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ChooseLevelWindow/ChooseLevelButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/EnemySpawner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/EnemySpawner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/HUD.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/HUD.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/EnemyStaticData/ToiletEnemyStaticData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/EnemyStaticData/ToiletEnemyStaticData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/EnemyStaticData/ZombieEnemyStaticData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/EnemyStaticData/ZombieEnemyStaticData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/WeaponsConfig/WeaponsConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/WeaponsConfig/WeaponsConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/ChooseLevelWindow/ChooseLevelWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/ChooseLevelWindow/ChooseLevelWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Logic/GameWorld/GameWorldInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/UI/Elements/LoadingCurtain/LoadingCurtain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/Data/Shop/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/Shop/WeponType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/Shop/WeaponType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" />
@@ -46,7 +152,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/BulletsDisplayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Logic/Loot/ICollectable.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Logic/Loot/Loot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/PrefabsPaths.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Logic/Loot/RandomLootSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Logic/TriggerObserver.cs" />
@@ -62,17 +167,20 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/LookAtCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/Models/GameModel/IGameModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/Models/GameModel/GameModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Logic/GameWorld/GameWorldInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/Enemy/EnemySpawnerActivator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/PrefabsPaths.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="2Sz6cPjsgWGFoIdBm04Ph5L4n2r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -131,6 +239,7 @@
       <workItem from="1691000920146" duration="2892000" />
       <workItem from="1691037478264" duration="7859000" />
       <workItem from="1691167246014" duration="2921000" />
+      <workItem from="1691907890403" duration="3317000" />
     </task>
     <servers />
   </component>

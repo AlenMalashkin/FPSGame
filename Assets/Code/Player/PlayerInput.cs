@@ -32,7 +32,6 @@ namespace Code.Player
 
 		private void OnResultsReported(GameResults results)
 		{
-			Debug.Log("Results reported");
 			InputService.Disable();
 		}
 

@@ -19,7 +19,6 @@ namespace Code.Services.GameOverService
         public void OverGameWithResult(GameResults result)
         {
             ResultsReported?.Invoke(result);
-            Debug.Log("Game ended");
             _gameStateMachine.Enter<GameOverState, GameResults>(result);
         }
     }

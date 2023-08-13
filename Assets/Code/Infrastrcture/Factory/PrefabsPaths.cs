@@ -4,7 +4,6 @@ namespace Code.Infrastructure.Factory
 	{
 		public const string PlayerPrefabPath = "Prefabs/Player";
 		public const string HUDPrefabPath = "Prefabs/HUD";
-		public const string EnemySpawnerPrefabPath = "Prefabs/EnemySpawner";
-		public const string Enemy = "Prefabs/Enemy";
+		public const string EnemySpawnerPrefabPath = "Prefabs/Enemies/EnemySpawner";
 	}
 }

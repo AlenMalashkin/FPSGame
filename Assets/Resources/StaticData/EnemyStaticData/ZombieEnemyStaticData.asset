@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ZombieEnemyStaticData
   m_EditorClassIdentifier: 
   Type: 1
-  EnemyPrefab: {fileID: 6871199812885627734, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
+  EnemyPrefab: {fileID: 4694480231465379037, guid: f5d87836608bff74590bb29a1611c7e2, type: 3}
   Health: 5
   Damage: 10

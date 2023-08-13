@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f943be225d2a4cb68329d0c1338af942, type: 3}
+  m_Name: HUDConfigs
+  m_EditorClassIdentifier: 
+  HUDConfigsList:
+  - Type: 0
+    HudPrefab: {fileID: 7373267884852453700, guid: b22e9041394e7f54ab2bfacbdb3017b8, type: 3}
+  - Type: 1
+    HudPrefab: {fileID: 6354396369751626286, guid: 38e9941ee7bb2e4479dc8a645882ecd6, type: 3}
+  - Type: 2
+    HudPrefab: {fileID: 2651510707045783447, guid: d7dbb642c90a88349ae22b4c4a22f335, type: 3}

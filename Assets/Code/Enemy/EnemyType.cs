@@ -3,6 +3,8 @@
     public enum EnemyType
     {
         Toilet,
-        Zombie
+        Zombie,
+        Cameraman,
+        Noob
     }
 }

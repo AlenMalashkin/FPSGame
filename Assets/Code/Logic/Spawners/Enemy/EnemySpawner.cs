@@ -1,20 +1,18 @@
-using System;
+using Code.Data.Models.EnemySpawnerModel;
 using Code.Data.Models.GameModel;
-using Code.Enemy;
 using Code.Infrastructure.Factory;
 using UnityEngine;
-using VavilichevGD.Utils.Timing;
 using Zenject;
 
 namespace Code.Logic.Spawners
 {
 	public class EnemySpawner : MonoBehaviour
 	{
-		public EnemyType Type { get; set; }
+		public EnemySpawnerStats Stats { get; set; }
+
 		[SerializeField] private EnemySpawnerHealth enemySpawnerHealth;
 		[SerializeField] private Transform spawnPoint;
 		[SerializeField] private GameObject spawner;
-		[SerializeField] private float timeToSpawnNext = 10;
 
 		private IGameFactory _gameFactory;
 		private IGameModel _gameModel;
@@ -28,11 +26,11 @@ namespace Code.Logic.Spawners
 			_gameModel = gameModel;
 		}
 		
-		private void Awake()
+		private void Start()
 		{
 			spawner.SetActive(false);
 			_canSpawn = false;
-			_timeToSpawnNext = timeToSpawnNext;
+			_timeToSpawnNext = Stats.TimeToSpawnEnemy;
 		}
 
 		private void Update()
@@ -47,8 +45,8 @@ namespace Code.Logic.Spawners
 
 		private void Spawn()
 		{
-			_gameFactory.CreateEnemy(Type, spawnPoint);
-			_timeToSpawnNext = timeToSpawnNext;
+			_gameFactory.CreateEnemy(Stats.Type, spawnPoint);
+			_timeToSpawnNext = Stats.TimeToSpawnEnemy;
 		}
 
 		private void CountCooldown()
@@ -63,7 +61,7 @@ namespace Code.Logic.Spawners
 		public void Activate()
 		{
 			_canSpawn = true;
-			_timeToSpawnNext = timeToSpawnNext;
+			_timeToSpawnNext = Stats.TimeToSpawnEnemy;
 			spawner.SetActive(true);
 			enemySpawnerHealth.Refill();
 			_gameModel.EnemySpawnerActivator.OnSpawnerActivated(this);

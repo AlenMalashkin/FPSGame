@@ -1,9 +1,12 @@
+using Code.Data;
+using Code.Data.Models.EnemySpawnerModel;
 using Code.Data.Models.GameModel;
 using Code.Enemy;
 using Code.Logic;
 using Code.Logic.Spawners;
 using Code.Services.StaticDataService;
 using Code.StaticData.EnemyStaticData;
+using Code.UI.Elements.HUD;
 using UnityEngine;
 using Zenject;
 
@@ -14,14 +17,16 @@ namespace Code.Infrastructure.Factory
 		private DiContainer _diContainer;
 		private IStaticDataService _staticDataService;
 		private IGameModel _gameModel;
+		private IEnemySpawnersModel _enemySpawnersModel;
 		
 		[Inject]
 		private void Construct(DiContainer diContainer, IStaticDataService staticDataService,
-			IGameModel gameModel)
+			IGameModel gameModel, IEnemySpawnersModel enemySpawnersModel)
 		{
 			_diContainer = diContainer;
 			_staticDataService = staticDataService;
 			_gameModel = gameModel;
+			_enemySpawnersModel = enemySpawnersModel;
 		}
 		
 		public GameObject CreatePlayer(Transform at)
@@ -31,15 +36,22 @@ namespace Code.Infrastructure.Factory
 			return player;
 		}
 
-		public GameObject CreateHud(Transform at)
+		public GameObject CreateHud(Transform at, HUDType type)
 		{
-			return _diContainer.InstantiatePrefabResource(PrefabsPaths.HUDPrefabPath, at);
+			HUDConfig hudConfig = _staticDataService.ForHud(type);
+			return _diContainer.InstantiatePrefab(hudConfig.HudPrefab, at);
 		}
 
 		public GameObject CreateEnemySpawner(EnemyType type, Transform at)
 		{
 			GameObject enemySpawner = _diContainer.InstantiatePrefabResource(PrefabsPaths.EnemySpawnerPrefabPath, at.position, Quaternion.identity, at);
-			enemySpawner.GetComponent<EnemySpawner>().Type = type;
+
+			EnemySpawnerStats stats = _staticDataService.ForEnemySpawner(type);
+			_enemySpawnersModel.TimeToReduceSpawnTime = 10;
+			_enemySpawnersModel.EnemySpawnersStats.Add(stats);
+			
+			enemySpawner.GetComponent<EnemySpawner>().Stats = stats;
+			enemySpawner.GetComponent<EnemySpawnerHealth>().Stats = stats;
 			return enemySpawner;
 		}
 
