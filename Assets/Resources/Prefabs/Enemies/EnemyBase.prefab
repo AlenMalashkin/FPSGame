@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 4875071052663498025}
   - component: {fileID: 9003113068468397449}
   - component: {fileID: 652886329364192648}
+  - component: {fileID: 5991198434204190297}
   m_Layer: 6
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -451,6 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 5577309510603654428}
+  animator: {fileID: 5991198434204190297}
 --- !u!114 &5286436018199816844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 8394242911674626616}
+  animator: {fileID: 5991198434204190297}
+  distance: 1
   attackRate: 1
   cleavage: 0.5
   mask:
@@ -508,3 +512,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0cd98f5ca143fda52e777a9a172165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMovement: {fileID: 8394242911674626616}
+  enemyAnimator: {fileID: 5991198434204190297}
+  enemyColliders:
+  - {fileID: 6871199812885627735}
+  - {fileID: 9126378110205844449}
+--- !u!114 &5991198434204190297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871199812885627734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e579e828b67341e6bbc4e42fa7727c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 859207189615912550}

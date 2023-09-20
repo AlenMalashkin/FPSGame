@@ -8,6 +8,7 @@ namespace Code.Enemy
 	public class EnemyMovement : MonoBehaviour
 	{
 		[SerializeField] private NavMeshAgent agent;
+		[SerializeField] private EnemyAnimator animator;
 
 		private IGameModel _gameModel;
 		private GameObject _player;
@@ -21,6 +22,7 @@ namespace Code.Enemy
 		private void Start()
 		{
 			_player = _gameModel.Player;
+			Move();
 		}
 
 		private void Update()
@@ -35,6 +37,7 @@ namespace Code.Enemy
 
 		public void Move()
 		{
+			animator.ChangeAnimationState(EnemyAnimationStates.Walk);
 			agent.isStopped = false;
 		}
 	}

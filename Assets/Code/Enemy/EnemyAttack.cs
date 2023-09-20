@@ -11,6 +11,7 @@ namespace Code.Enemy
 	{
 		public int Damage { get; set; }
 		[SerializeField] private EnemyMovement movement;
+		[SerializeField] private EnemyAnimator animator;
 		[SerializeField] private float distance = 1;
 		[SerializeField] private float attackRate = 1f;
 		[SerializeField] private float cleavage = 0.5f;
@@ -90,6 +91,7 @@ namespace Code.Enemy
 		public void EnableAttack()
 		{
 			_canAttack = true;
+			animator.ChangeAnimationState(EnemyAnimationStates.Attack);
 			_attackRateTimer.Start(attackRate);
 			movement.Stop();
 		}

@@ -1,4 +1,5 @@
 using System;
+using Code.Enemy;
 using Code.Infrastructure.StateMachine;
 using Code.Infrastructure.StateMachine.States;
 using Code.Logic;
