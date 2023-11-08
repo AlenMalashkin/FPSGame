@@ -986,7 +986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Height
-      value: 4.5024095
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Radius
@@ -998,7 +998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Center.y
-      value: 2.00831
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Center.z

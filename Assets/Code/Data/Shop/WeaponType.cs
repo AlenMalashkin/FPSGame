@@ -4,6 +4,8 @@ namespace Code.Data.Shop
 	{
 		Pistol,
 		M4,
-		Ak
+		Ak,
+		Mp7,
+		Ump
 	}
 }

@@ -481,9 +481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 8394242911674626616}
   animator: {fileID: 5991198434204190297}
-  distance: 1
+  distance: 2
   attackRate: 1
-  cleavage: 0.5
+  cleavage: 2
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -512,7 +512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0cd98f5ca143fda52e777a9a172165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovement: {fileID: 8394242911674626616}
+  enemyAttack: {fileID: 4875071052663498025}
+  agent: {fileID: 5577309510603654428}
   enemyAnimator: {fileID: 5991198434204190297}
   enemyColliders:
   - {fileID: 6871199812885627735}

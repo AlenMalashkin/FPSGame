@@ -39,7 +39,6 @@ namespace Code.Infrastructure.StateMachine.States
 		{
 			_loadingCurtain.Hide();
 			_gameModel.GameWorldInitializer.InitializeGameWorld();
-			_enemySpawnTimeReduceService.StartReduce();
 		}
 
 		public class Factory : PlaceholderFactory<IGameStateMachine, GameState>

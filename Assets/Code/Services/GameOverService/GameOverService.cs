@@ -1,7 +1,6 @@
 ﻿using System;
 using Code.Infrastructure.StateMachine;
 using Code.Infrastructure.StateMachine.States;
-using UnityEngine;
 
 namespace Code.Services.GameOverService
 {

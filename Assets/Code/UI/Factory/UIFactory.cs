@@ -46,7 +46,7 @@ namespace Code.UI.Factory
 
 		public void CreateShopItem(ShopItem prefab, Transform parent, WeaponType type)
 		{
-			ShopItem shopItem = _diContainer.InstantiatePrefab(prefab, parent).GetComponent<ShopItem>();
+			ShopItem shopItem = _diContainer.InstantiatePrefabForComponent<ShopItem>(prefab, parent);
 			shopItem.Type = type;
 			shopItem.Init();
 		}

@@ -45,15 +45,8 @@ namespace Code.Enemy
 			_attackRateTimer.TimerFinished -= Attack;
 		}
 
-		private void Update()
-		{
-			transform.LookAt(_player.transform);
-		}
-
 		private void Attack()
 		{
-			OnAttack();
-			
 			if (_canAttack)
 				_attackRateTimer.Start(attackRate);
 		}

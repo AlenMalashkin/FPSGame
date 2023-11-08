@@ -40,3 +40,21 @@ MonoBehaviour:
     ReloadTime: 1
     BulletsCount: 150
     BulletsInClip: 30
+  - weaponPrefab: {fileID: 4322007566884244892, guid: 7833b6bd345706948a970de00bba59f9, type: 3}
+    Type: 3
+    Sprite: {fileID: 7482667652216324306, guid: 1e68f435d9bad4b44986a53ce03b29e9, type: 3}
+    Cost: 4
+    Damage: 4
+    FireRate: 0.2
+    ReloadTime: 1
+    BulletsCount: 150
+    BulletsInClip: 30
+  - weaponPrefab: {fileID: 7821248495980185226, guid: c6c48dafc261bc94ca8b8a6ac06a3e28, type: 3}
+    Type: 4
+    Sprite: {fileID: 7482667652216324306, guid: 1e68f435d9bad4b44986a53ce03b29e9, type: 3}
+    Cost: 5
+    Damage: 5
+    FireRate: 0.2
+    ReloadTime: 1
+    BulletsCount: 150
+    BulletsInClip: 30

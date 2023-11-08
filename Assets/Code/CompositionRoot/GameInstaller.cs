@@ -6,6 +6,7 @@ using Code.Infrastructure.Factory;
 using Code.Infrastructure.StateMachine;
 using Code.Logic.GameModes;
 using Code.Services;
+using Code.Services.ArenaModeKillCounter;
 using Code.Services.Bank;
 using Code.Services.ChooseGameModeService;
 using Code.Services.GameOverService;
@@ -61,6 +62,8 @@ namespace CompositionRoot
 			BindUIFactory();
 			
 			BindGameFactory();
+
+			BindKillCountService();
 		}
 
 		private void BindGameBootstraperFactory()
@@ -102,7 +105,7 @@ namespace CompositionRoot
 				.ByInstaller<GameStateMachineInstaller>()
 				.AsSingle();
 		}
-		
+
 		private void BindChooseGameModeService()
 		{
 			Container
@@ -204,6 +207,13 @@ namespace CompositionRoot
 				.BindInterfacesAndSelfTo<GameFactory>()
 				.FromSubContainerResolve()
 				.ByInstaller<GameFactoryInstaller>()
+				.AsSingle();
+		}
+
+		private void BindKillCountService()
+		{
+			Container
+				.BindInterfacesAndSelfTo<KillCounter>()
 				.AsSingle();
 		}
 	}

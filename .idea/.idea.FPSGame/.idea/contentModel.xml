@@ -94,6 +94,7 @@
               <e p="IGameWorldPart.cs" t="Include" />
             </e>
             <e p="IHealth.cs" t="Include" />
+            <e p="Level.cs" t="Include" />
             <e p="Loot" t="Include">
               <e p="BulletsLoot.cs" t="Include" />
               <e p="HealthLoot.cs" t="Include" />
@@ -125,6 +126,10 @@
             <e p="PlayerShoot.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
+            <e p="ArenaModeKillCounter" t="Include">
+              <e p="IKillCounter.cs" t="Include" />
+              <e p="KillCounter.cs" t="Include" />
+            </e>
             <e p="Bank" t="Include">
               <e p="Bank.cs" t="Include" />
               <e p="IBank.cs" t="Include" />
@@ -172,6 +177,9 @@
             <e p="HUDConfigs" t="Include">
               <e p="HUDConfigs.cs" t="Include" />
             </e>
+            <e p="LevelStaticData" t="Include">
+              <e p="LevelStaticData.cs" t="Include" />
+            </e>
             <e p="WeaponsConfig" t="Include">
               <e p="WeaponsConfig.cs" t="Include" />
             </e>
@@ -186,9 +194,11 @@
               </e>
               <e p="HUD" t="Include">
                 <e p="BulletsDisplayer.cs" t="Include" />
+                <e p="EnemiesRemainDisplayer.cs" t="Include" />
                 <e p="HudBase.cs" t="Include" />
                 <e p="HUDParent.cs" t="Include" />
                 <e p="HUDType.cs" t="Include" />
+                <e p="SurvivalModeTimer.cs" t="Include" />
               </e>
               <e p="LoadingCurtain" t="Include">
                 <e p="ILoadingCurtain.cs" t="Include" />
@@ -235,6 +245,54 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="NavMeshComponents" t="Include">
+            <e p="Assets" t="Include">
+              <e p="Gizmos" t="Include" />
+              <e p="NavMeshComponents" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="NavMeshAssetManager.cs" t="Include" />
+                  <e p="NavMeshComponentsEditor.asmdef" t="Include" />
+                  <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+                  <e p="NavMeshLinkEditor.cs" t="Include" />
+                  <e p="NavMeshModifierEditor.cs" t="Include" />
+                  <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+                  <e p="NavMeshSurfaceEditor.cs" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="NavMeshComponents.asmdef" t="Include" />
+                  <e p="NavMeshLink.cs" t="Include" />
+                  <e p="NavMeshModifier.cs" t="Include" />
+                  <e p="NavMeshModifierVolume.cs" t="Include" />
+                  <e p="NavMeshSurface.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Tests" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="NavMeshComponentsTestsEditmode.asmdef" t="Include" />
+                  <e p="NavMeshModifierVolumeInPrefabTests.cs" t="Include" />
+                  <e p="NavMeshSurfaceInPrefabTests.cs" t="Include" />
+                  <e p="NavMeshSurfaceInPrefabVariantTests.cs" t="Include" />
+                  <e p="PrefabSavingUtil.cs" t="Include" />
+                  <e p="PrefabStageAutoSavingUtil.cs" t="Include" />
+                </e>
+                <e p="NavMeshComponentsTestsPlaymode.asmdef" t="Include" />
+                <e p="NavMeshSurfaceAgentTests.cs" t="Include" />
+                <e p="NavMeshSurfaceLinkTests.cs" t="Include" />
+                <e p="NavMeshSurfaceModifierTests.cs" t="Include" />
+                <e p="NavMeshSurfaceModifierVolumeTests.cs" t="Include" />
+                <e p="NavMeshSurfaceTests.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Documentation" t="Include">
+              <e p="Images" t="Include" />
+            </e>
+            <e p="Packages" t="Include">
+              <e p="manifest.json" t="Include" />
+            </e>
+            <e p="ProjectSettings" t="Include">
+              <e p="ProjectVersion.txt" t="Include" />
+            </e>
+          </e>
           <e p="VavilichevGD" t="Include">
             <e p="Utils" t="Include">
               <e p="SyncedTimer" t="Include">
@@ -600,13 +658,105 @@
             <e p="zenject.asmdef" t="Include" />
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="Animations" t="Include">
+            <e p="Units" t="Include">
+              <e p="Cameraman" t="Include" />
+              <e p="Noob" t="Include" />
+              <e p="Skibidi" t="Include" />
+              <e p="Zombie" t="Include" />
+            </e>
+          </e>
+          <e p="Infrastructure" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Collectabilities" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Models" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Enviroment" t="Include">
+              <e p="Arena" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Survival" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+            </e>
+            <e p="Units" t="Include">
+              <e p="Cameraman" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Noob" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Skibidi" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Zombie" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+            </e>
+            <e p="Weapons" t="Include">
+              <e p="Ak" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Deagle" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="M4" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="MP7" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Ump" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Enemies" t="Include">
+              <e p="Models" t="Include" />
+            </e>
+            <e p="HUD" t="Include" />
+            <e p="Levels" t="Include" />
+            <e p="Loot" t="Include" />
+            <e p="Weapons" t="Include" />
+          </e>
+          <e p="StaticData" t="Include">
+            <e p="EnemySpawnersStaticData" t="Include" />
+            <e p="EnemyStaticData" t="Include" />
+            <e p="HUDConfigs" t="Include" />
+            <e p="LevelsStaticData" t="Include" />
+            <e p="WeaponsConfig" t="Include" />
+            <e p="WindowConfigs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="Windows" t="Include">
+              <e p="ChooseLevelWindow" t="Include" />
+              <e p="GameOverWindows" t="Include" />
+              <e p="MenuWindow" t="Include" />
+              <e p="ShopWindow" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scenes" t="Include" />
         <e p="TextMesh Pro" t="Include">
+          <e p="Documentation" t="Include" />
           <e p="Examples &amp; Extras" t="Include">
             <e p="Fonts" t="Include">
               <e p="Anton OFL.txt" t="Include" />
               <e p="Bangers - OFL.txt" t="Include" />
               <e p="Oswald-Bold - OFL.txt" t="Include" />
             </e>
+            <e p="Materials" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Color Gradient Presets" t="Include" />
+              <e p="Fonts &amp; Materials" t="Include" />
+              <e p="Sprite Assets" t="Include" />
+            </e>
+            <e p="Scenes" t="Include" />
             <e p="Scripts" t="Include">
               <e p="Benchmark01.cs" t="Include" />
               <e p="Benchmark01_UGUI.cs" t="Include" />
@@ -643,13 +793,18 @@
               <e p="VertexZoom.cs" t="Include" />
               <e p="WarpTextExample.cs" t="Include" />
             </e>
+            <e p="Sprites" t="Include" />
+            <e p="Textures" t="Include" />
           </e>
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
           </e>
           <e p="Resources" t="Include">
+            <e p="Fonts &amp; Materials" t="Include" />
             <e p="LineBreaking Following Characters.txt" t="Include" />
             <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Sprite Assets" t="Include" />
+            <e p="Style Sheets" t="Include" />
           </e>
           <e p="Shaders" t="Include">
             <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
@@ -677,6 +832,10 @@
         </e>
       </e>
       <e p="FPSGame.sln" t="IncludeFlat" />
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsTestsEditmode.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsTestsPlaymode.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />

@@ -27,7 +27,8 @@ namespace Code.Enemy
 
 		private void Update()
 		{
-			agent.SetDestination(_player.transform.position);
+			if (agent.enabled)
+				agent.SetDestination(_player.transform.position);
 		}
 
 		public void Stop()

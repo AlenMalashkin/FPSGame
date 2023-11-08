@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 971025775819212508}
   - component: {fileID: 3571197911675083447}
   - component: {fileID: 2814326858231191622}
+  - component: {fileID: 3718318878816739153}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3718318878816739153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982504118439709991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48acd417c52247e483d572ac74dbe6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 6109904456876781476}
+  timeToEndSurvivalMode: 90
 --- !u!1 &8106213934215176299
 GameObject:
   m_ObjectHideFlags: 0

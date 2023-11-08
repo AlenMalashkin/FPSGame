@@ -3,9 +3,11 @@ using Code.Data.Models.EnemySpawnerModel;
 using Code.Data.Models.GameModel;
 using Code.Enemy;
 using Code.Logic;
+using Code.Logic.GameModes;
 using Code.Logic.Spawners;
 using Code.Services.StaticDataService;
 using Code.StaticData.EnemyStaticData;
+using Code.StaticData.LevelStaticData;
 using Code.UI.Elements.HUD;
 using UnityEngine;
 using Zenject;
@@ -28,7 +30,14 @@ namespace Code.Infrastructure.Factory
 			_gameModel = gameModel;
 			_enemySpawnersModel = enemySpawnersModel;
 		}
-		
+
+		public GameObject CreateLevel(GameModes gameMode, Transform parent)
+		{
+			LevelStaticData levelStaticData = _staticDataService.ForLevel(gameMode);
+			GameObject level = _diContainer.InstantiatePrefab(levelStaticData.LevelPrefab, parent);
+			return level;
+		}
+
 		public GameObject CreatePlayer(Transform at)
 		{
 			GameObject player = _diContainer.InstantiatePrefabResource(PrefabsPaths.PlayerPrefabPath, at);

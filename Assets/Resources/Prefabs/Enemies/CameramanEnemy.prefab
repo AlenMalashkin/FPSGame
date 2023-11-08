@@ -937,10 +937,6 @@ PrefabInstance:
       propertyPath: cleavage
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4875071052663498025, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
-      propertyPath: distance
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6595437191490377259, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2
@@ -995,7 +991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Height
-      value: 4.261169
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Radius
@@ -1007,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Center.y
-      value: 1.9205844
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6871199812885627735, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_Center.z

@@ -1192,10 +1192,6 @@ PrefabInstance:
       propertyPath: cleavage
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4875071052663498025, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
-      propertyPath: distance
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6595437191490377259, guid: 06d0de392abb49445a5c3355f261394b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2
