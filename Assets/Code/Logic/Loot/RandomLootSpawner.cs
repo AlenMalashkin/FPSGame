@@ -27,7 +27,7 @@ namespace Code.Logic.Loot
 
 		public void SpawnRandomLoot(Vector3 at)
 		{
-			_diContainer.InstantiatePrefab(allLoot[Random.Range(0, allLoot.Length)], at, Quaternion.identity, null);
+			_diContainer.InstantiatePrefab(allLoot[Random.Range(0, allLoot.Length)], at, Quaternion.identity, transform);
 		}
 	}
 }

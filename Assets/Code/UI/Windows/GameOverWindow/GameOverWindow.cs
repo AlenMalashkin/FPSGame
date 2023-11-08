@@ -13,7 +13,6 @@ namespace Code.UI.Windows.GameOverWindow
     {
         [Header("References")]
         [SerializeField] private TextMeshProUGUI resultText;
-        [SerializeField] private Button retryButton;
         [SerializeField] private Button backButton;
 
         [Header("Params")]
@@ -40,20 +39,12 @@ namespace Code.UI.Windows.GameOverWindow
 
         private void OnEnable()
         {
-            retryButton.onClick.AddListener(RetryLevel);
             backButton.onClick.AddListener(Back);
         }
 
         private void OnDisable()
         {
-            retryButton.onClick.RemoveListener(RetryLevel);
             backButton.onClick.RemoveListener(Back);
-        }
-
-        private void RetryLevel()
-        {
-            _curtain.Show();
-            _gameStateMachine.Enter<GameState, string>("Main");
         }
 
         private void Back()

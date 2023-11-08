@@ -23,89 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e33fec3-5946-40c8-9163-d62ab84c5a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/Level.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/Level.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ArenaModeKillCounter.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ArenaModeKillCounter/IKillCounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ArenaModeKillCounter/IKillCounter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ArenaModeKillCounter/KillCounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/ArenaModeKillCounter/KillCounter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/LevelStaticData.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/LevelStaticData/LevelStaticData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/StaticData/LevelStaticData/LevelStaticData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/EnemiesRemainDisplayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/EnemiesRemainDisplayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/SurvivalModeTimer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/HUD/SurvivalModeTimer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/CompositionRoot/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/CompositionRoot/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/Shop/WeaponType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/Shop/WeaponType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyDeath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/Factory/IGameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastrcture/StateMachine/States/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/ArenaGameMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/ArenaGameMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/SurvivalGameMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameModes/SurvivalGameMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/GameWorld/GameWorldInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/GameWorld/GameWorldInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverService/GameOverService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/IStaticDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataPaths.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/StaticDataService/StaticDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Factory/UIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Factory/UIFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Cameraman/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Cameraman/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Cameraman/CameramanAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Cameraman/CameramanAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Cameraman/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Cameraman/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Noob/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Noob/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Noob/Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Noob/Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/Die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/Die.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/SkibidiAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Skibidi/SkibidiAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Zombie/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Zombie/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Zombie/Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Units/Zombie/Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Enviroment/Arena/Mineways2Skfb.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Enviroment/Arena/Mineways2Skfb.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Enviroment/Survival/Mineways2Skfb.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Enviroment/Survival/Mineways2Skfb.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Units/Cameraman/cameraman_rigged.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Units/Cameraman/cameraman_rigged.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Units/Skibidi/default.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Units/Skibidi/default.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Units/Zombie/zombie_rigged.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Units/Zombie/zombie_rigged.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Weapons/Ak/Ak.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Weapons/Ak/Ak.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Weapons/Deagle/Desert eagle.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Weapons/Deagle/Desert eagle.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/CameramanEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/CameramanEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/EnemyBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/EnemyBase.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/NoobEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/NoobEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/ToiletEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/ToiletEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/ZombieEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/ZombieEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/HUD/ArenaModeHUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/HUD/ArenaModeHUD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/HUD/SurvivalModeHUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/HUD/SurvivalModeHUD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/BulletsLoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/BulletsLoot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/BulletsLoot.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/BulletsLoot.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/Health.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/Health.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/HealthLoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/HealthLoot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/HealthLoot.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/HealthLoot.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/Money.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/Money.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/MoneyLoot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Loot/MoneyLoot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Weapons/Ak.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Weapons/Ak.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Weapons/M4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Weapons/M4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Weapons/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Weapons/Pistol.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/WeaponsConfig/WeaponsConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/WeaponsConfig/WeaponsConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/GameOverWindows/LoseWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/GameOverWindows/LoseWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/GameOverWindows/WinWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/GameOverWindows/WinWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main/NavMesh.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main/NavMesh.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPSGame/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/GameOverWindows/GameOverWindowBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/GameOverWindows/GameOverWindowBase.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +94,11 @@
       </list>
     </option>
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2TYdLQ5zRxCKsGOmJNZhN4dpdWb" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -180,18 +107,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -199,8 +128,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -233,9 +163,11 @@
       <workItem from="1698400309708" duration="596000" />
       <workItem from="1698412616745" duration="1848000" />
       <workItem from="1698495260492" duration="5130000" />
+      <workItem from="1699467701050" duration="4000" />
     </task>
     <servers />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +180,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
