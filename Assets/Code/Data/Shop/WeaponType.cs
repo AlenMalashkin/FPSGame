@@ -2,10 +2,10 @@ namespace Code.Data.Shop
 {
 	public enum WeaponType
 	{
-		Pistol,
-		M4,
-		Ak,
-		Mp7,
-		Ump
+		Pistol = 0,
+		Ump = 1,
+		Mp7 = 2,
+		M4 = 3,
+		Ak = 4
 	}
 }

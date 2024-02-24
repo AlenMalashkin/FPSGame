@@ -14,18 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartStats:
   - Type: 0
-    TimeToSpawnEnemy: 10
-    MinTimeToSpawnEnemy: 5
+    TimeToSpawnEnemy: 6
     EnemySpawnerHealth: 15
   - Type: 1
-    TimeToSpawnEnemy: 9
-    MinTimeToSpawnEnemy: 4
-    EnemySpawnerHealth: 10
+    TimeToSpawnEnemy: 3
+    EnemySpawnerHealth: 15
   - Type: 2
-    TimeToSpawnEnemy: 9
-    MinTimeToSpawnEnemy: 4
-    EnemySpawnerHealth: 10
+    TimeToSpawnEnemy: 4
+    EnemySpawnerHealth: 15
   - Type: 3
-    TimeToSpawnEnemy: 9
-    MinTimeToSpawnEnemy: 4
-    EnemySpawnerHealth: 10
+    TimeToSpawnEnemy: 7
+    EnemySpawnerHealth: 15

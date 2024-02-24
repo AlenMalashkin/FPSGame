@@ -14,14 +14,14 @@ namespace Code.UI.Elements.LoadingCurtain
 		}
 
 		public void Hide()
-			=> StartCoroutine(FadeOutCoroutine());
+			=> gameObject.SetActive(false);
 
 		private IEnumerator FadeOutCoroutine()
 		{
 			while (curtain.alpha > 0)
 			{
 				curtain.alpha -= 0.03f;
-				yield return new WaitForSeconds(0.03f);
+				yield return new WaitForSeconds(0.01f);
 			}
 			
 			gameObject.SetActive(false);

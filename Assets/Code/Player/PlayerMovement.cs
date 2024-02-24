@@ -1,16 +1,25 @@
+using Code.Services.InputService;
 using UnityEngine;
+using Zenject;
 
 namespace Code.Player
 {
 	public class PlayerMovement : MonoBehaviour
 	{
-		private PlayerInput _playerInput;
+		[SerializeField] private float speed;
+		
+		private IInputService _inputService;
 		private CharacterController _characterController;
 
+		[Inject]
+		private void Construct(IInputService inputService)
+		{
+			_inputService = inputService;
+		}
+		
 		private void Awake()
 		{
 			_characterController = GetComponent<CharacterController>();
-			_playerInput = GetComponent<PlayerInput>();
 		}
 
 		private void Update()
@@ -20,8 +29,8 @@ namespace Code.Player
 
 		private void Move()
 		{
-			Vector3 movement = (transform.right * _playerInput.ReadMoveDirection().x + 
-			                    transform.forward * _playerInput.ReadMoveDirection().y) * 20;
+			Vector3 movement = (transform.right * _inputService.ReadMoveDirection().x + 
+			                    transform.forward * _inputService.ReadMoveDirection().y) * speed;
 
 			movement += Physics.gravity;
 

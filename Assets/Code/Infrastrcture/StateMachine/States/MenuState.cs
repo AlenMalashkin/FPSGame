@@ -1,8 +1,7 @@
+using Audio;
 using Code.UI.Elements.LoadingCurtain;
-using Code.UI.Factory;
 using Code.UI.Services;
 using Code.UI.Windows;
-using UnityEngine;
 using Zenject;
 
 namespace Code.Infrastructure.StateMachine.States
@@ -15,15 +14,16 @@ namespace Code.Infrastructure.StateMachine.States
 		private SceneLoader _sceneLoader;
 		private LoadingCurtain _curtain;
 		private IWindowService _windowService;
-		private DiContainer _diContainer;
+		private MusicPlayer _musicPlayer;
 		
 		public MenuState(IGameStateMachine gameStateMachine, SceneLoader sceneLoader,
-			LoadingCurtain curtain, IWindowService windowService)
+			LoadingCurtain curtain, IWindowService windowService, MusicPlayer musicPlayer)
 		{
 			_gameStateMachine = gameStateMachine;
 			_sceneLoader = sceneLoader;
 			_curtain = curtain;
 			_windowService = windowService;
+			_musicPlayer = musicPlayer;
 		}
 		
 		public void Enter()
@@ -33,12 +33,14 @@ namespace Code.Infrastructure.StateMachine.States
 
 		public void Exit()
 		{
+			_windowService.CloseAllOpenedWindows();
 		}
 
 		private void OnLoad()
 		{
 			_curtain.Hide();
 			_windowService.Open(WindowType.Menu);
+			_musicPlayer.PlayLoopedAudio("MenuBgMusic");	
 		}
 
 		public class Factory : PlaceholderFactory<IGameStateMachine, MenuState>

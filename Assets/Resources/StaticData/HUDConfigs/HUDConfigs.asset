@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUDConfigsList:
   - Type: 0
-    HudPrefab: {fileID: 7373267884852453700, guid: b22e9041394e7f54ab2bfacbdb3017b8, type: 3}
+    HudPrefab: {fileID: 7827387657298457913, guid: b22e9041394e7f54ab2bfacbdb3017b8, type: 3}
   - Type: 1
-    HudPrefab: {fileID: 6354396369751626286, guid: 38e9941ee7bb2e4479dc8a645882ecd6, type: 3}
+    HudPrefab: {fileID: 7260394310977076190, guid: 38e9941ee7bb2e4479dc8a645882ecd6, type: 3}
   - Type: 2
-    HudPrefab: {fileID: 2651510707045783447, guid: d7dbb642c90a88349ae22b4c4a22f335, type: 3}
+    HudPrefab: {fileID: 7152277244807223975, guid: d7dbb642c90a88349ae22b4c4a22f335, type: 3}
+  - Type: 3
+    HudPrefab: {fileID: 1974633412899741326, guid: 4566a6bdb91bdf949bd444c015dae3df, type: 3}
+  - Type: 4
+    HudPrefab: {fileID: 6577096519864903474, guid: 5e3433db79505484ea28f9c62ea424ab, type: 3}

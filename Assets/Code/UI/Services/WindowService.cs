@@ -1,11 +1,14 @@
-using System;
+using System.Collections.Generic;
 using Code.UI.Factory;
 using Code.UI.Windows;
+using UnityEngine;
 
 namespace Code.UI.Services
 {
 	public class WindowService : IWindowService
 	{
+		private Dictionary<WindowType, WindowBase> _openedWindows = new Dictionary<WindowType, WindowBase>();
+		
 		private IUIFactory _uiFactory;
 		
 		public WindowService(IUIFactory uiFactory)
@@ -15,20 +18,27 @@ namespace Code.UI.Services
 		
 		public void Open(WindowType type)
 		{
-			switch (type)
+			if (_openedWindows.ContainsKey(type)) 
+				return;
+
+			WindowBase openedWindow = _uiFactory.CreateWindow(type);
+			_openedWindows.Add(type, openedWindow);
+		}
+
+		public void Close(WindowType type)
+		{
+			Object.Destroy(_openedWindows[type].gameObject);
+			_openedWindows.Remove(type);
+		}
+
+		public void CloseAllOpenedWindows()
+		{
+			foreach (var key in _openedWindows.Keys)
 			{
-				case WindowType.Menu:
-					_uiFactory.CreateMenu();
-					break;
-				case WindowType.ChooseLevel:
-					_uiFactory.CreateChooseLevel();
-					break;
-				case WindowType.Shop:
-					_uiFactory.CreateShop();
-					break;
-				default:
-					throw new ArgumentOutOfRangeException(nameof(type), type, null);
+				Object.Destroy(_openedWindows[key].gameObject);
 			}
+			
+			_openedWindows.Clear();
 		}
 	}
 }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 3
   EnemyPrefab: {fileID: 926387857914958441, guid: 18e541110beaaea489746f5f9267711f, type: 3}
-  Health: 20
+  Health: 12
   Damage: 20

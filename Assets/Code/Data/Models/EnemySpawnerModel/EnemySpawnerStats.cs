@@ -8,15 +8,12 @@ namespace Code.Data.Models.EnemySpawnerModel
 	{
 		public EnemyType Type;
 		public float TimeToSpawnEnemy;
-		public float MinTimeToSpawnEnemy;
 		public int EnemySpawnerHealth;
 
-		public EnemySpawnerStats(EnemyType type, float timeToSpawnEnemy, float minTimeToSpawnEnemy, int enemySpawnerHealth)
+		public EnemySpawnerStats(EnemyType type, float timeToSpawnEnemy, int enemySpawnerHealth)
 		{
 			Type = type;
 			TimeToSpawnEnemy = timeToSpawnEnemy;
-			MinTimeToSpawnEnemy = minTimeToSpawnEnemy;
-			EnemySpawnerHealth = enemySpawnerHealth;
 		}
 	}
 }

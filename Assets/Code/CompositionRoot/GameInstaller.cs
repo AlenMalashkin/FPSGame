@@ -1,3 +1,4 @@
+using Audio;
 using Code.Data;
 using Code.Data.Models.EnemySpawnerModel;
 using Code.Data.Models.GameModel;
@@ -5,21 +6,21 @@ using Code.Infrastructure;
 using Code.Infrastructure.Factory;
 using Code.Infrastructure.StateMachine;
 using Code.Logic.GameModes;
-using Code.Services;
 using Code.Services.ArenaModeKillCounter;
 using Code.Services.Bank;
 using Code.Services.ChooseGameModeService;
 using Code.Services.GameOverService;
-using Code.Services.InputService;
 using Code.Services.PauseService;
 using Code.Services.SaveService;
 using Code.Services.StaticDataService;
+using Code.Services.SurvivalModeTimerService;
+using Code.UI.Elements.HUD;
 using Code.UI.Elements.LoadingCurtain;
 using Code.UI.Factory;
 using Code.UI.Services;
 using Zenject;
 
-namespace CompositionRoot
+namespace Code.CompositionRoot
 {
 	public class GameInstaller : MonoInstaller
 	{
@@ -33,18 +34,20 @@ namespace CompositionRoot
 
 			BindLoadingCurtain();
 
-			BindPauseService();
+			BindAudioPlayer();
 
+			BindPauseService();
+			
 			BindGameStateMachine();
-			
+
 			BindChooseGameModeService();
-			
+
 			BindGameOverService();
 
 			BindPersistentProgressModel();
-			
+
 			BindGameModel();
-			
+
 			BindEnemySpawnerModel();
 
 			BindSaveService();
@@ -52,18 +55,18 @@ namespace CompositionRoot
 			BindBank();
 
 			BindStaticDataService();
-			
-			BindInputService();
-			
-			BindEnemySpawnTimeReduceService();
 
 			BindWindowService();
 
+			BindInputControlls();
+			
 			BindUIFactory();
 			
 			BindGameFactory();
 
 			BindKillCountService();
+
+			BindSurvivalModeTimerService();
 		}
 
 		private void BindGameBootstraperFactory()
@@ -94,6 +97,14 @@ namespace CompositionRoot
 			Container
 				.BindInterfacesAndSelfTo<LoadingCurtain>()
 				.FromComponentInNewPrefabResource(InfrastructurePrefabPaths.LoadingCurtain)
+				.AsSingle();
+		}
+
+		private void BindAudioPlayer()
+		{
+			Container
+				.Bind<MusicPlayer>()
+				.FromComponentInNewPrefabResource(InfrastructurePrefabPaths.AudioPlayer)
 				.AsSingle();
 		}
 
@@ -132,7 +143,7 @@ namespace CompositionRoot
 		private void BindPersistentProgressModel()
 		{
 			Container
-				.BindInterfacesAndSelfTo<PersistentProgressModel>()
+				.BindInterfacesAndSelfTo<ProgressModel>()
 				.AsSingle();
 		}
 
@@ -171,24 +182,18 @@ namespace CompositionRoot
 				.AsSingle();
 		}
 
-		private void BindInputService()
-		{
-			Container
-				.BindInterfacesAndSelfTo<InputService>()
-				.AsSingle();
-		}
-
-		private void BindEnemySpawnTimeReduceService()
-		{
-			Container
-				.BindInterfacesAndSelfTo<EnemySpawnTimeReduceService>()
-				.AsSingle();
-		}
-
 		private void BindWindowService()
 		{
 			Container
 				.BindInterfacesAndSelfTo<WindowService>()
+				.AsSingle();
+		}
+
+		private void BindInputControlls()
+		{
+			Container
+				.Bind<InputControlls>()
+				.FromInstance(new InputControlls())
 				.AsSingle();
 		}
 
@@ -214,6 +219,13 @@ namespace CompositionRoot
 		{
 			Container
 				.BindInterfacesAndSelfTo<KillCounter>()
+				.AsSingle();
+		}
+
+		private void BindSurvivalModeTimerService()
+		{
+			Container
+				.BindInterfacesAndSelfTo<SurvivalModeTimerService>()
 				.AsSingle();
 		}
 	}

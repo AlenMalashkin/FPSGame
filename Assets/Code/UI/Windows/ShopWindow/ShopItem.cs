@@ -18,17 +18,17 @@ namespace Code.UI.Windows.ShopWindow
 		[SerializeField] private TextMeshProUGUI itemText;
 
 		private IStaticDataService _staticDataService;
-		private IPersistentProgressModel _persistentProgress;
+		private IProgressModel _progress;
 		private ISaveService _saveService;
 		private IBank _bank;
 		private WeaponData _weaponData;
 		
 		[Inject]
-		private void Construct(IStaticDataService staticDataService, IPersistentProgressModel persistentProgress,
+		private void Construct(IStaticDataService staticDataService, IProgressModel progress,
 			ISaveService saveService, IBank bank)
 		{
 			_staticDataService = staticDataService;
-			_persistentProgress = persistentProgress;
+			_progress = progress;
 			_saveService = saveService;
 			_bank = bank;
 		}
@@ -58,7 +58,7 @@ namespace Code.UI.Windows.ShopWindow
 		{
 			if (!CheckIsBought() && _bank.SpendMoney(_weaponData.Cost))
 			{
-				_persistentProgress.Progress.WeaponsBought.Add(Type);
+				_progress.Progress.WeaponsBought.Add(Type);
 				itemText.text = "Куплено";
 			}
 		}
@@ -67,17 +67,17 @@ namespace Code.UI.Windows.ShopWindow
 		{
 			if (CheckIsBought() && !CheckIsEquipped())
 			{
-				_persistentProgress.Progress.WeaponEquipped = Type;
+				_progress.Progress.WeaponEquipped = Type;
 				itemText.text = "Выбрано";
 				buyOrEquip.interactable = false;
 			}
 		}
 
 		private bool CheckIsBought()
-			=> _persistentProgress.Progress.WeaponsBought.Contains(Type);
+			=> _progress.Progress.WeaponsBought.Contains(Type);
 
 		private bool CheckIsEquipped()
-			=> _persistentProgress.Progress.WeaponEquipped == Type;
+			=> _progress.Progress.WeaponEquipped == Type;
 
 		private void UpdateUI()
 		{

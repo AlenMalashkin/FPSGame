@@ -1,7 +1,6 @@
-﻿using Code.Services.GameOverService;
+﻿using Code.Services.SurvivalModeTimerService;
 using TMPro;
 using UnityEngine;
-using VavilichevGD.Utils.Timing;
 using Zenject;
 
 namespace Code.UI.Elements.HUD
@@ -9,49 +8,30 @@ namespace Code.UI.Elements.HUD
     public class SurvivalModeTimer : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI timerText;
-        [SerializeField] private float timeToEndSurvivalMode;
 
-        private SyncedTimer _timer;
-        private IGameOverService _gameOverService;
+        private ISurvivalModeTimerService _survivalModeTimerService;
+        private float _seconds;
 
         [Inject]
-        private void Construct(IGameOverService gameOverService)
+        private void Construct(ISurvivalModeTimerService survivalModeTimerService)
         {
-            _gameOverService = gameOverService;
-        }
-        
-        private void Awake()
-        {
-            _timer = new SyncedTimer(TimerType.OneSecTick);
-        }
-
-        private void OnEnable()
-        {
-            _timer.TimerFinished += OnTimerFinished;
-            _timer.TimerValueChanged += OnTimerValueChanged;
+            _survivalModeTimerService = survivalModeTimerService;
         }
 
         private void Start()
         {
-            _timer.Start(timeToEndSurvivalMode);
+            _survivalModeTimerService.StartCount();
         }
 
-        private void OnDisable()
+        private void Update()
         {
-            _timer.TimerFinished -= OnTimerFinished;
-            _timer.TimerValueChanged -= OnTimerValueChanged;
+            _survivalModeTimerService.CountTime();
+            ChangeTimerValue(_survivalModeTimerService.Time);
         }
 
-        private void OnTimerValueChanged(float time, TimeChangingSource source)
+        private void ChangeTimerValue(float time)
         {
-            float minutes = Mathf.FloorToInt(time / 60);
-            float seconds = Mathf.FloorToInt(time % 60);
-            timerText.text = $"{minutes:00} : {seconds:00}";
-        }
-
-        private void OnTimerFinished()
-        {
-            _gameOverService.OverGameWithResult(GameResults.Win);
+            timerText.text = _survivalModeTimerService.FormatTime(time);
         }
     }
 }

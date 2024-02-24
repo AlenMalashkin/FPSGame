@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Code.Data.Models.GameModel;
 using Code.Logic;
@@ -33,6 +34,12 @@ namespace Code.Enemy
 		{
 			_player = _gameModel.Player;
 			_attackRateTimer = new SyncedTimer(TimerType.UpdateTick);
+		}
+
+		private void Update()
+		{
+			if (_canAttack)
+				transform.LookAt(_player.transform);
 		}
 
 		private void OnEnable()

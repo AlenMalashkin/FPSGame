@@ -11,16 +11,16 @@ namespace Code.Services.Bank
 
 		public int Money
 		{
-			get => _persistentProgress.Progress.Money;
-			set => _persistentProgress.Progress.Money = value >= 0 ? value : 0;
+			get => _progress.Progress.Money;
+			set => _progress.Progress.Money = value >= 0 ? value : 0;
 		}
 
-		private IPersistentProgressModel _persistentProgress;
+		private IProgressModel _progress;
 		private ISaveService _saveService;
 
-		public Bank(IPersistentProgressModel persistentProgress, ISaveService saveService)
+		public Bank(IProgressModel progress, ISaveService saveService)
 		{
-			_persistentProgress = persistentProgress;
+			_progress = progress;
 			_saveService = saveService;
 		}
 		

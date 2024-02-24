@@ -1,6 +1,7 @@
 using System;
 using Code.Data;
 using Code.Data.Shop;
+using Code.Services.InputService;
 using Code.Services.StaticDataService;
 using UnityEngine;
 using VavilichevGD.Utils.Timing;
@@ -23,28 +24,29 @@ namespace Code.Player
 		[SerializeField] private int bulletsInClipMax;
 		[SerializeField] private int bulletsInClipCurrent;
 
-		private IPersistentProgressModel _persistentProgress;
+		private IProgressModel _progress;
 		private IStaticDataService _staticData;
-		private PlayerInput _input;
+		private IInputService _inputService;
 		private SyncedTimer _reloadTimer;
 		private SyncedTimer _fireRateTimer;
 		private bool _isReloading;
 		private bool _isEmptyClip;
 		
 		[Inject]
-		private void Construct(IPersistentProgressModel persistentProgress, IStaticDataService staticData)
+		private void Construct(IProgressModel progress, IStaticDataService staticData,
+			 IInputService inputService)
 		{
-			_persistentProgress = persistentProgress;
+			_progress = progress;
 			_staticData = staticData;
+			_inputService = inputService;
 		}
 
 		private void Awake()
 		{
 			_reloadTimer = new SyncedTimer(TimerType.UpdateTick);
 			_fireRateTimer = new SyncedTimer(TimerType.UpdateTick);
-			_input = GetComponent<PlayerInput>();
 			
-			WeaponData weaponData = _staticData.ForWeapon(_persistentProgress.Progress.WeaponEquipped);
+			WeaponData weaponData = _staticData.ForWeapon(_progress.Progress.WeaponEquipped);
 			reloadTime = weaponData.ReloadTime;
 			fireRate = weaponData.FireRate;
 			bulletsInBagMax = weaponData.BulletsCount;
@@ -58,11 +60,18 @@ namespace Code.Player
 			BulletsCountChanged?.Invoke(bulletsInClipCurrent, bulletsInBag);
 		}
 
+		private void Update()
+		{
+			if (_inputService.ReadReloadButton())
+			{
+				Reload();
+			}
+		}
+
 		private void OnEnable()
 		{
 			playerShoot.Shooted += OnShooted;
 			_reloadTimer.TimerFinished += ReloadCompleted;
-			_input.InputService.InputControlls.Game.Reload.performed += ctx => Reload();
 		}
 
 		private void OnDisable()

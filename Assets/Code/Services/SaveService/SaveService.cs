@@ -10,11 +10,11 @@ namespace Code.Services.SaveService
 		public event Action ProgressSaved;
 		
 		private const string SavePath = "Progress";
-		private IPersistentProgressModel _persistentProgressModel;
+		private IProgressModel _progressModel;
 
-		public SaveService(IPersistentProgressModel persistentProgressModel)
+		public SaveService(IProgressModel progressModel)
 		{
-			_persistentProgressModel = persistentProgressModel;
+			_progressModel = progressModel;
 		}
 
 		public PlayerProgress Load()
@@ -22,7 +22,7 @@ namespace Code.Services.SaveService
 
 		public void Save()
 		{
-			PlayerPrefs.SetString(SavePath, _persistentProgressModel.Progress.ToJson());
+			PlayerPrefs.SetString(SavePath, _progressModel.Progress.ToJson());
 			ProgressSaved?.Invoke();
 		}
 	}

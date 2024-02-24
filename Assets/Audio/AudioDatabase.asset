@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4645132edefd4c74968a0c941a98fb89, type: 3}
+  m_Name: AudioDatabase
+  m_EditorClassIdentifier: 
+  _items:
+  - Clip: {fileID: 8300000, guid: fe48c6cbe8f1044468d4da4d0c48ed49, type: 3}
+    Key: MenuBgMusic
+    FolderPath: Audio\AudioClips\
+    Name: MenuBgMusic.wav
+    Preload: 1
+    _id: 95970947-625c-4160-a647-d447c747c2c8
+  - Clip: {fileID: 8300000, guid: 36231cdce436cc74b8e5ea30d1fae601, type: 3}
+    Key: Shoot
+    FolderPath: Audio\AudioClips\
+    Name: shot.wav
+    Preload: 1
+    _id: 4d1eed33-27d9-426c-b2c4-ad9a1f4b0941
+  - Clip: {fileID: 8300000, guid: 3bb9a756f26c6374c805f9f737a67cf0, type: 3}
+    Key: ArenaMusic
+    FolderPath: Audio\AudioClips\
+    Name: ArenaMusic.mp3
+    Preload: 1
+    _id: 975fce00-aaa6-4f09-a305-e044e0bf2121
+  - Clip: {fileID: 8300000, guid: 3d11bfd5398d63349b4ceeeaa3a78637, type: 3}
+    Key: SurvivalMusic
+    FolderPath: Audio\AudioClips\
+    Name: SurvivalMusic.wav
+    Preload: 1
+    _id: 3322c890-9414-4015-b8bb-c7964f8ad613

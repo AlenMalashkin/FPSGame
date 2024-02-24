@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Shoot",
-                    "type": "Button",
-                    "id": "3de2d4fb-e145-40db-8457-c41b35cb70a6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Reload",
                     "type": "Button",
                     "id": "bf3d410a-f742-46e7-8a5b-37af255eb0ae",
@@ -34,12 +25,48 @@
                 },
                 {
                     "name": "MoveCamera",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "0b60e9f0-b1b9-4517-ba71-a3eacb06c6b1",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "TouchPosition",
+                    "type": "PassThrough",
+                    "id": "31ea3876-9ee1-4971-b511-c02a38eb1328",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "27a7930d-c341-41d1-a6a7-0d76ab5dd645",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondFingerTouchPosition",
+                    "type": "PassThrough",
+                    "id": "c476549b-9faf-4f47-9e29-fc8eb0b52672",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondFingerMoveCamera",
+                    "type": "PassThrough",
+                    "id": "d993fae8-a9cf-4fb8-a6f0-c1d86b58bbb6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -100,22 +127,22 @@
                 },
                 {
                     "name": "",
-                    "id": "f8be663e-5168-401d-913c-c4a00156c4a1",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Desctop",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "858beca6-28f8-44e6-83be-2d691b1454bc",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "Desctop",
+                    "action": "MoveCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3309201e-6448-4322-8261-af610f7191b6",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "MoveCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -128,6 +155,50 @@
                     "processors": "",
                     "groups": "Desctop",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2816ae87-e2f7-4583-9d7e-b28c413f1949",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aef1acb2-f7a8-4f94-8e5e-35b915043036",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Desctop",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "497f4cb1-0d9c-4268-8b23-9be010bb998a",
+                    "path": "<Touchscreen>/touch1/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondFingerTouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "201dff9d-a67c-41d9-b8fa-b8d48c3cece1",
+                    "path": "<Touchscreen>/touch1/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondFingerMoveCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

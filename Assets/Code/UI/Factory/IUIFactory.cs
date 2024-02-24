@@ -8,10 +8,8 @@ namespace Code.UI.Factory
 	public interface IUIFactory
 	{
 		void CreateRoot(Transform parent);
-		void CreateMenu();
-		void CreateShop();
-		void CreateChooseLevel();
+		WindowBase CreateWindow(WindowType type);
 		void CreateShopItem(ShopItem prefab, Transform parent, WeaponType type);
-		void CreateGameOverWindow(WindowType type);
+		RectTransform CreateCameraRotationZone();
 	}
 }

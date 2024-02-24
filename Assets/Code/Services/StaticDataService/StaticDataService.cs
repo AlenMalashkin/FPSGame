@@ -6,11 +6,13 @@ using Code.Data.Shop;
 using Code.Enemy;
 using Code.Logic;
 using Code.Logic.GameModes;
+using Code.Logic.Loot;
 using Code.StaticData;
 using Code.StaticData.EnemySpawnerStaticData;
 using Code.StaticData.EnemyStaticData;
 using Code.StaticData.HUDConfigs;
 using Code.StaticData.LevelStaticData;
+using Code.StaticData.LootStaticData;
 using Code.StaticData.WeaponsConfig;
 using Code.UI.Elements.HUD;
 using Code.UI.Windows;
@@ -26,7 +28,8 @@ namespace Code.Services.StaticDataService
 		private Dictionary<WeaponType, WeaponData> _weaponsData = new Dictionary<WeaponType, WeaponData>();
 		private Dictionary<EnemyType, EnemySpawnerStats> _enemySpawnerStatsMap = new Dictionary<EnemyType, EnemySpawnerStats>();
 		private Dictionary<HUDType, HUDConfig> _hudConfigsMap = new Dictionary<HUDType, HUDConfig>();
-		
+		private Dictionary<LootType, LootStaticData> _lootStaticDataMap = new Dictionary<LootType, LootStaticData>();
+
 		public void Load()
 		{
 			_levelsStaticDataMap = Resources.LoadAll<LevelStaticData>(StaticDataPaths.LevelStaticDataPath)
@@ -34,7 +37,7 @@ namespace Code.Services.StaticDataService
 			
 			_enemyStaticDataMap = Resources.LoadAll<EnemyStaticData>(StaticDataPaths.EnemyStaticDataPath)
 				.ToDictionary(x => x.Type);
-			
+
 			_windowConfigsMap = Resources.Load<WindowConfigs>(StaticDataPaths.WindowConfigsPath)
 				.Configs
 				.ToDictionary(x => x.Type);
@@ -50,13 +53,19 @@ namespace Code.Services.StaticDataService
 			_hudConfigsMap = Resources.Load<HUDConfigs>(StaticDataPaths.HUDConfigsPath)
 				.HUDConfigsList
 				.ToDictionary(x => x.Type);
+
+			_lootStaticDataMap = Resources.LoadAll<LootStaticData>("StaticData/LootStaticData")
+				.ToDictionary(x => x.LootType);
 		}
 
 		public LevelStaticData ForLevel(GameModes gameMode)
 			=> _levelsStaticDataMap[gameMode];
-		
+
 		public EnemyStaticData ForEnemy(EnemyType type)
 			=> _enemyStaticDataMap[type];
+
+		public LootStaticData ForLoot(LootType lootType)
+			=> _lootStaticDataMap[lootType];
 
 		public WindowConfig ForWindow(WindowType type)
 			=> _windowConfigsMap[type];

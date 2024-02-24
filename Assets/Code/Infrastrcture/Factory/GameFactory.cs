@@ -4,10 +4,12 @@ using Code.Data.Models.GameModel;
 using Code.Enemy;
 using Code.Logic;
 using Code.Logic.GameModes;
+using Code.Logic.Loot;
 using Code.Logic.Spawners;
 using Code.Services.StaticDataService;
 using Code.StaticData.EnemyStaticData;
 using Code.StaticData.LevelStaticData;
+using Code.StaticData.LootStaticData;
 using Code.UI.Elements.HUD;
 using UnityEngine;
 using Zenject;
@@ -48,7 +50,8 @@ namespace Code.Infrastructure.Factory
 		public GameObject CreateHud(Transform at, HUDType type)
 		{
 			HUDConfig hudConfig = _staticDataService.ForHud(type);
-			return _diContainer.InstantiatePrefab(hudConfig.HudPrefab, at);
+			_gameModel.HUD = _diContainer.InstantiatePrefabForComponent<HudBase>(hudConfig.HudPrefab, at);
+			return _gameModel.HUD.gameObject;
 		}
 
 		public GameObject CreateEnemySpawner(EnemyType type, Transform at)
@@ -72,6 +75,13 @@ namespace Code.Infrastructure.Factory
 			enemy.GetComponent<IHealth>().MaxHealth = enemyStaticData.Health;
 			enemy.GetComponent<IHealth>().CurrentHealth = enemyStaticData.Health;
 			return enemy;
+		}
+
+		public GameObject CreateLoot(LootType type, Vector3 at, Transform parent)
+		{
+			LootStaticData lootStaticData = _staticDataService.ForLoot(type);
+			
+			return _diContainer.InstantiatePrefab(lootStaticData.LootPrefab, at, Quaternion.identity, parent);
 		}
 
 		public GameObject CreateWeapon(GameObject prefab, Transform at)

@@ -1,6 +1,11 @@
-﻿using Code.Infrastructure;
+﻿using System;
+using Code.Data;
+using Code.Infrastructure;
 using Code.Infrastructure.StateMachine;
 using Code.Infrastructure.StateMachine.States;
+using Code.Logic.GameModes;
+using Code.Services.ChooseGameModeService;
+using Code.Services.SurvivalModeTimerService;
 using Code.UI.Elements.LoadingCurtain;
 using TMPro;
 using UnityEngine;
@@ -11,30 +16,23 @@ namespace Code.UI.Windows.GameOverWindow
 {
     public class GameOverWindow : WindowBase
     {
-        [Header("References")]
-        [SerializeField] private TextMeshProUGUI resultText;
         [SerializeField] private Button backButton;
-
-        [Header("Params")]
-        [SerializeField] private string result;
-        [SerializeField] private Color textColor;
+        [SerializeField] private TextMeshProUGUI recordText;
 
         private IGameStateMachine _gameStateMachine;
         private LoadingCurtain _curtain;
-        private SceneLoader _sceneLoader;
-        
+        private IChooseGameModeService _gameModeService;
+        private IProgressModel _progressModel;
+        private ISurvivalModeTimerService _survivalModeTimerService;
+
         [Inject]
-        private void Construct(IGameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain curtain)
+        private void Construct(IGameStateMachine gameStateMachine, LoadingCurtain curtain, IChooseGameModeService gameModeService, IProgressModel progressModel, ISurvivalModeTimerService survivalModeTimerService)
         {
             _gameStateMachine = gameStateMachine;
-            _sceneLoader = sceneLoader;
             _curtain = curtain;
-        }
-        
-        private void Awake()
-        {
-            resultText.text = result;
-            resultText.color = textColor;
+            _gameModeService = gameModeService;
+            _progressModel = progressModel;
+            _survivalModeTimerService = survivalModeTimerService;
         }
 
         private void OnEnable()
@@ -45,6 +43,15 @@ namespace Code.UI.Windows.GameOverWindow
         private void OnDisable()
         {
             backButton.onClick.RemoveListener(Back);
+        }
+
+        private void Start()
+        {
+            if (_gameModeService.GetCurrentGameMode() == GameModes.Arena)
+                recordText.text = "Рекорд: " + _progressModel.Progress.RecordKillCount;
+
+            if (_gameModeService.GetCurrentGameMode() == GameModes.Survival)
+                recordText.text = "Рекорд: " + _survivalModeTimerService.FormatTime(_progressModel.Progress.RecordTime);
         }
 
         private void Back()

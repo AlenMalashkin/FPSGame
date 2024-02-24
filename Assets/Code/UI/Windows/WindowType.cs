@@ -6,6 +6,8 @@ namespace Code.UI.Windows
 		Shop,
 		ChooseLevel,
 		Lose,
-		Win
+		Win,
+		Pause,
+		Settings
 	}
 }

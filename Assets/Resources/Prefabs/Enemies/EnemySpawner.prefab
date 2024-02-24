@@ -447,6 +447,7 @@ MonoBehaviour:
   enemySpawnerHealth: {fileID: 6065790952049975343}
   spawnPoint: {fileID: 1493076165733589849}
   spawner: {fileID: 178640377242703951}
+  spawnerCollider: {fileID: 7817258109176212052}
 --- !u!114 &6065790952049975343
 MonoBehaviour:
   m_ObjectHideFlags: 0

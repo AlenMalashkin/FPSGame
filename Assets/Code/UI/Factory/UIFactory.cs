@@ -26,22 +26,10 @@ namespace Code.UI.Factory
 			_uiRoot = uiRoot.transform;
 		}
 
-		public void CreateMenu()
+		public WindowBase CreateWindow(WindowType type)
 		{
-			WindowConfig menuWindowConfig = _staticDataService.ForWindow(WindowType.Menu);
-			_diContainer.InstantiatePrefab(menuWindowConfig.WindowPrefab, _uiRoot);
-		}
-
-		public void CreateShop()
-		{
-			WindowConfig shopWindowConfig = _staticDataService.ForWindow(WindowType.Shop);
-			_diContainer.InstantiatePrefab(shopWindowConfig.WindowPrefab, _uiRoot);
-		}
-
-		public void CreateChooseLevel()
-		{
-			WindowConfig chooseLevelWindowConfig = _staticDataService.ForWindow(WindowType.ChooseLevel);
-			_diContainer.InstantiatePrefab(chooseLevelWindowConfig.WindowPrefab, _uiRoot);
+			WindowConfig windowConfig = _staticDataService.ForWindow(type);
+			return _diContainer.InstantiatePrefabForComponent<WindowBase>(windowConfig.WindowPrefab, _uiRoot);
 		}
 
 		public void CreateShopItem(ShopItem prefab, Transform parent, WeaponType type)
@@ -51,10 +39,9 @@ namespace Code.UI.Factory
 			shopItem.Init();
 		}
 
-		public void CreateGameOverWindow(WindowType type)
+		public RectTransform CreateCameraRotationZone()
 		{
-			WindowConfig chooseLevelWindowConfig = _staticDataService.ForWindow(type);
-			_diContainer.InstantiatePrefab(chooseLevelWindowConfig.WindowPrefab, _uiRoot);
+			return _diContainer.InstantiatePrefabResourceForComponent<RectTransform>("UI/CameraRotationZone", _uiRoot);
 		}
 	}
 }

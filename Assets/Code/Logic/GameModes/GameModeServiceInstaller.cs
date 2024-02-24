@@ -8,14 +8,6 @@ namespace Code.Logic.GameModes
 		public override void InstallBindings()
 		{
 			Container
-				.Bind<ArenaGameMode>()
-				.AsSingle();
-
-			Container
-				.Bind<SurvivalGameMode>()
-				.AsSingle();
-
-			Container
 				.BindInterfacesAndSelfTo<ChooseGameModeService>()
 				.AsSingle();
 		}

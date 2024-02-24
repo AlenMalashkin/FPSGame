@@ -13,11 +13,12 @@ namespace Code.Logic.Spawners
 		[SerializeField] private EnemySpawnerHealth enemySpawnerHealth;
 		[SerializeField] private Transform spawnPoint;
 		[SerializeField] private GameObject spawner;
+		[SerializeField] private Collider spawnerCollider;
 
 		private IGameFactory _gameFactory;
 		private IGameModel _gameModel;
-		private bool _canSpawn;
 		private float _timeToSpawnNext;
+		private bool _canSpawn;
 
 		[Inject]
 		private void Construct(IGameFactory gameFactory, IGameModel gameModel)
@@ -29,6 +30,7 @@ namespace Code.Logic.Spawners
 		private void Start()
 		{
 			spawner.SetActive(false);
+			spawnerCollider.enabled = false;
 			_canSpawn = false;
 			_timeToSpawnNext = Stats.TimeToSpawnEnemy;
 		}
@@ -63,14 +65,17 @@ namespace Code.Logic.Spawners
 			_canSpawn = true;
 			_timeToSpawnNext = Stats.TimeToSpawnEnemy;
 			spawner.SetActive(true);
+			spawnerCollider.enabled = true;
 			enemySpawnerHealth.Refill();
 			_gameModel.EnemySpawnerActivator.OnSpawnerActivated(this);
+			Spawn();
 		}
 
 		public void Deactivate()
 		{
 			_canSpawn = false;
 			spawner.SetActive(false);
+			spawnerCollider.enabled = false;
 			_gameModel.EnemySpawnerActivator.OnSpawnerDeactivated(this);
 		}
 	}

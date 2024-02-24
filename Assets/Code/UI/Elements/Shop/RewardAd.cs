@@ -2,12 +2,14 @@ using System;
 using Code.Services.Bank;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 using Zenject;
 
 namespace Code.UI.Elements.Shop
 {
 	public class RewardAd : MonoBehaviour
 	{
+		[SerializeField] private int rewardForVideo = 10;
 		[SerializeField] private Button reward;
 		
 		private IBank _bank;
@@ -20,17 +22,18 @@ namespace Code.UI.Elements.Shop
 
 		private void OnEnable()
 		{
-			reward.onClick.AddListener(GetReward);
+			YandexGame.CloseVideoEvent += GetReward;
 		}
 
 		private void OnDisable()
 		{
-			reward.onClick.RemoveListener(GetReward);
+			YandexGame.CloseVideoEvent -= GetReward;
+
 		}
 
 		private void GetReward()
 		{
-			_bank.GetMoney(10);
+			_bank.GetMoney(rewardForVideo);
 		}
 	}
 }

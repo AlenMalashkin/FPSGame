@@ -4,6 +4,8 @@
 	{
 		BaseHUDDesctop,
 		ArenaHUDDesctop,
-		SurvivalHUDDesctop
+		SurvivalHUDDesctop,
+		ArenaHUDMobile,
+		SurvivalHUDMobile
 	}
 }

@@ -9,14 +9,14 @@ namespace Code.Infrastructure.StateMachine.States
 	{
 		private IGameStateMachine _gameStateMachine;
 		private ISaveService _saveService;
-		private IPersistentProgressModel _persistentProgress;
+		private IProgressModel _progress;
 		
 		public LoadProgressState(IGameStateMachine gameStateMachine, ISaveService saveService,
-			IPersistentProgressModel persistentProgress)
+			IProgressModel progress)
 		{
 			_gameStateMachine = gameStateMachine;
 			_saveService = saveService;
-			_persistentProgress = persistentProgress;
+			_progress = progress;
 		}
 		
 		public void Enter()
@@ -31,7 +31,7 @@ namespace Code.Infrastructure.StateMachine.States
 
 		private void LoadProgressOrInitNew()
 		{
-			_persistentProgress.Progress = _saveService.Load() ?? InitNewProgress();
+			_progress.Progress = _saveService.Load() ?? InitNewProgress();
 		}
 
 		private PlayerProgress InitNewProgress()

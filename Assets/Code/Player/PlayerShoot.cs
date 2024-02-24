@@ -3,9 +3,9 @@ using Code.Data;
 using Code.Data.Shop;
 using Code.Infrastructure.Factory;
 using Code.Logic;
+using Code.Logic.Weapons;
 using Code.Services.StaticDataService;
 using UnityEngine;
-using VavilichevGD.Utils.Timing;
 using Zenject;
 
 namespace Code.Player
@@ -28,59 +28,50 @@ namespace Code.Player
         [SerializeField] private LayerMask layerMask;
         [SerializeField] private float distance = Mathf.Infinity;
 
-        private PlayerInput _playerInput;
         private IGameFactory _gameFactory;
-        private IPersistentProgressModel _persistentProgress;
+        private IProgressModel _progress;
         private IStaticDataService _staticData;
 
+        private Weapon _weapon;
+
         [Inject]
-        private void Construct(IGameFactory gameFactory, IPersistentProgressModel persistentProgress, IStaticDataService staticData)
+        private void Construct(IGameFactory gameFactory, IProgressModel progress, 
+            IStaticDataService staticData)
         {
             _gameFactory = gameFactory;
-            _persistentProgress = persistentProgress;
+            _progress = progress;
             _staticData = staticData;
         }
         
         private void Start()
         {
-            _playerInput = GetComponent<PlayerInput>();
-            WeaponData weaponData = _staticData.ForWeapon(_persistentProgress.Progress.WeaponEquipped);
+            WeaponData weaponData = _staticData.ForWeapon(_progress.Progress.WeaponEquipped);
             damage = weaponData.Damage;
-            _gameFactory.CreateWeapon(weaponData.weaponPrefab, weaponSpawnPoint);
+            GameObject weapon = _gameFactory.CreateWeapon(weaponData.weaponPrefab, weaponSpawnPoint);
+            _weapon = weapon.GetComponent<Weapon>();
         }
 
         private void Update()
         {
-            if (_playerInput.InputService.InputControlls.Game.Shoot.IsPressed())
-            {
-                TryShoot();
-            }
-        }
-
-        private void TryShoot()
-        {
-            if (playerReload.CanShoot())
-            {
-                Shoot();
-            }
+            Shoot();
         }
 
         private void Shoot()
         {
             var direction = firstPersonCamera.transform.forward;
             var ray = new Ray(firstPersonCamera.transform.position, direction);
-
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, distance, layerMask))
-            {
-                var hitCollider = hitInfo.collider;
-
-                if (hitCollider.gameObject.TryGetComponent(out IHealth damageable))
-                {
-                    damageable.TakeDamage(damage);
-                }
-            }
+            Debug.DrawRay(ray.origin, direction * 200, Color.red, 1);
             
-            Shooted?.Invoke();
+            if (Physics.Raycast(ray, out RaycastHit hitInfo, distance, layerMask) 
+                && hitInfo.collider.TryGetComponent(out IHealth damageable)
+                && playerReload.CanShoot())
+            {
+                damageable.TakeDamage(damage);
+                
+                _weapon.NotifyShoot();
+            
+                Shooted?.Invoke();
+            }
         }
     }
 }
